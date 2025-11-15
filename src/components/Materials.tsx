@@ -7,6 +7,7 @@ import rect74 from "../assets/media/Rectangle 74.png";
 import rect75 from "../assets/media/Rectangle 75.png";
 import rect76 from "../assets/media/Rectangle 76.png";
 import rect77 from "../assets/media/Rectangle 77.png";
+import { Helmet } from 'react-helmet-async';
 
 
 const Materials: React.FC = () => {
@@ -86,6 +87,49 @@ const Materials: React.FC = () => {
   ];
   return (
     <section id="materials" className="py-20 px-[5%]">
+      <Helmet>
+        <title>Printing Materials & Specifications | Premium Paper, Vinyl, Canvas | Chandraa Concepts</title>
+
+        <meta
+          name="description"
+          content="Explore premium printing materials including cardstock, textured paper, recycled paper, vinyl, canvas, and transparent films. View GSM, thickness, finishes, and usage specs for each material."
+        />
+
+        <meta
+          name="keywords"
+          content="printing materials, cardstock GSM, textured paper, recycled paper, vinyl stickers, canvas prints, transparent film printing, printing specs, Chandraa Concepts materials"
+        />
+
+        <link rel="canonical" href="https://www.chandraaconcepts.com/materials" />
+
+        {/* Open Graph SEO */}
+        <meta property="og:title" content="Printing Materials & Specifications | Chandraa Concepts" />
+        <meta
+          property="og:description"
+          content="Premium printing materials with detailed specifications: GSM, texture, finish, durability, and recommended applications."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1581091012184-5c3d7c353d62?auto=format&fit=crop&w=800&q=80"
+        />
+        <meta property="og:url" content="https://www.chandraaconcepts.com/materials" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Premium Printing Materials | High-Quality Paper, Vinyl & Canvas"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover high-end materials for printing: premium paper, eco-friendly options, vinyl, art canvas, and transparent films."
+        />
+        <meta
+          name="twitter:image"
+          content="https://images.unsplash.com/photo-1581091012184-5c3d7c353d62?auto=format&fit=crop&w=800&q=80"
+        />
+      </Helmet>
       <div className="section-header text-center mb-12">
         <h2 className="section-title text-5xl font-bold text-[#2b2101] opacity-0 animate-fadeInUp">
           Printing Materials & Specifications

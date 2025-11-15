@@ -4,6 +4,7 @@ import design78 from "../assets/media/Rectangle 78.png";
 import design79 from "../assets/media/Rectangle 79.png";
 import design80 from "../assets/media/Rectangle 80.png";
 import design81 from "../assets/media/Rectangle 81.png";
+import { Helmet } from 'react-helmet-async';
 
 const Designs: React.FC = () => {
   const designs = [
@@ -44,6 +45,48 @@ const Designs: React.FC = () => {
 
   return (
     <section id="designs" className="py-20 px-[5%] bg-white/55">
+
+<Helmet>
+  <title>Design Concepts – Creative Print & Branding Designs | Chandraa Concepts</title>
+
+  <meta
+    name="description"
+    content="Explore premium design concepts including minimalist, bold, eco-friendly, and luxury print designs. Crafted by Chandraa Concepts for all branding needs."
+  />
+
+  <meta
+    name="keywords"
+    content="print design concepts, minimalist design, luxury print design, eco-friendly print design, branding designs, Chandraa Concepts designs"
+  />
+
+  <link rel="canonical" href="https://www.chandraaconcepts.com/designs" />
+
+  {/* Open Graph (Facebook/LinkedIn) */}
+  <meta property="og:title" content="Design Concepts – Creative Print & Branding Designs" />
+  <meta
+    property="og:description"
+    content="Browse our clean, bold, eco-friendly, and luxury print design concepts crafted for all printing applications."
+  />
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1525104698733-6d1b7a2e3f7c?auto=format&fit=crop&w=800&q=80"
+  />
+  <meta property="og:url" content="https://www.chandraaconcepts.com/designs" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Design Concepts – Creative Print & Branding Designs" />
+  <meta
+    name="twitter:description"
+    content="Explore creative print design concepts including minimalist, bold, eco-friendly, and luxury themes."
+  />
+  <meta
+    name="twitter:image"
+    content="https://images.unsplash.com/photo-1525104698733-6d1b7a2e3f7c?auto=format&fit=crop&w=800&q=80"
+  />
+</Helmet>
+
       <div className="section-header text-center mb-12">
         <h2 className="section-title text-5xl font-bold text-[#2b2101] opacity-0 animate-fadeInUp">
           Design Concepts

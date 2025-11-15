@@ -6,6 +6,7 @@ import rec38 from '../assets/media/Rectangle 38.png';
 import rec39 from '../assets/media/Rectangle 39.png';
 import rec40 from '../assets/media/Rectangle 40.png';
 import rec41 from '../assets/media/Rectangle 41.png';
+import { Helmet } from 'react-helmet-async';
 
 interface Service {
   id: number;
@@ -97,6 +98,48 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="py-20 px-[5%] min-h-screen">
+       <Helmet>
+        <title>Our Printing Services | Business, ID Cards, Packaging, Large Format & More</title>
+        <meta
+          name="description"
+          content="Explore premium printing services including business stationery, ID cards, promotional products, packaging, banners, books, and more. High-quality materials and fast delivery."
+        />
+        <meta name="keywords" content="
+          printing services,
+          business stationery printing,
+          ID card printing,
+          promotional product printing,
+          packaging printing,
+          large format printing,
+          book printing" />
+
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Printing & Branding Services",
+            "description": "High-quality printing solutions for businesses and individuals.",
+            "serviceType": "Printing Services",
+            "provider": {
+              "@type": "Organization",
+              "name": "Your Brand Name"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Printing Service Categories",
+              "itemListElement": services.map(service => ({
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": service.title,
+                  "description": service.description
+                }
+              }))
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="section-header text-center mb-12">
         <h2 className="section-title text-5xl font-bold text-[#2b2101] opacity-0 animate-fadeInUp">
           Our Premium Services

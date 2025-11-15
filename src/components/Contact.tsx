@@ -1,9 +1,39 @@
 // src/components/Contact.tsx
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 px-[5%] bg-white">
+      <Helmet>
+  <title>Contact Chandraa Concepts – Printing & Branding Services</title>
+
+  <meta
+    name="description"
+    content="Get in touch with Chandraa Concepts for premium printing, branding, and design services. Contact us for project inquiries, quotes, and consultation."
+  />
+
+  <meta
+    name="keywords"
+    content="contact chandraa concepts, printing services contact, branding company chennai, printing quote, print consultation"
+  />
+
+  <link rel="canonical" href="https://www.chandraaconcepts.com/contact" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Contact Chandraa Concepts – Let's Build Your Brand" />
+  <meta property="og:description" content="Reach out to Chandraa Concepts for high-quality printing, branding, and design solutions." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80" />
+  <meta property="og:url" content="https://www.chandraaconcepts.com/contact" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter */}
+  <meta name="twitter:title" content="Contact Chandraa Concepts – Printing & Branding Experts" />
+  <meta name="twitter:description" content="Have a project? Contact Chandraa Concepts for premium printing and branding services." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
       <div className="section-header text-center mb-12">
           <h2 className="text-5xl font-bold text-[#2b2101] animate-fadeInUp">
           Get In Touch

@@ -1,5 +1,6 @@
 // src/components/About.tsx
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const About: React.FC = () => {
   const stats = [
@@ -10,6 +11,34 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="py-20 px-[5%] min-h-screen">
+       <Helmet>
+        <title>About Chandraa Concepts – Printing & Branding Experts</title>
+
+        <meta
+          name="description"
+          content="Learn about Chandraa Concepts, a trusted printing and branding company in South India delivering premium quality printing, design, packaging, and branding solutions since 2010."
+        />
+
+        <meta
+          name="keywords"
+          content="about chandraa concepts, printing company india, branding services south india, premium printing, design studio"
+        />
+
+        <link rel="canonical" href="https://www.chandraaconcepts.com/about" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Chandraa Concepts – Your Trusted Printing Partner" />
+        <meta property="og:description" content="We are a leading printing, branding, and design company offering high-quality solutions for businesses since 2010." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80" />
+        <meta property="og:url" content="https://www.chandraaconcepts.com/about" />
+        <meta property="og:type" content="article" />
+
+        {/* Twitter */}
+        <meta name="twitter:title" content="About Chandraa Concepts – Printing & Branding" />
+        <meta name="twitter:description" content="Chandraa Concepts delivers premium printing and branding solutions backed by 14+ years of experience." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <div className="section-header text-center mb-12">
         <h2 className="section-title text-5xl font-bold text-[#2b2101] opacity-0 animate-fadeInUp">
           About Chandraa Concepts

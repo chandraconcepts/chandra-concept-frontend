@@ -1,5 +1,6 @@
 // src/components/FAQ.tsx
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const FAQ: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -49,6 +50,46 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="faq" className="py-20 px-[5%] bg-white">
+      <Helmet>
+  <title>FAQ – Printing Services Questions & Answers | Chandraa Concepts</title>
+
+  <meta
+    name="description"
+    content="Find answers to commonly asked questions about printing formats, design services, turnaround time, eco-friendly options, shipping, payments, and more at Chandraa Concepts."
+  />
+
+  <meta
+    name="keywords"
+    content="printing FAQ, design services FAQ, print turnaround time, printing formats, eco-friendly printing, printing questions, Chandraa Concepts FAQ"
+  />
+
+  <link rel="canonical" href="https://www.chandraaconcepts.com/faq" />
+
+  {/* Open Graph (Facebook / LinkedIn) */}
+  <meta property="og:title" content="FAQ – Printing Services Questions & Answers" />
+  <meta
+    property="og:description"
+    content="Browse our FAQ section to learn about file formats, printing timelines, design options, shipping, payments, and more."
+  />
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80"
+  />
+  <meta property="og:url" content="https://www.chandraaconcepts.com/faq" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ – Printing Services Questions & Answers" />
+  <meta
+    name="twitter:description"
+    content="Get answers to frequently asked questions about printing, design, shipping, payments, and more."
+  />
+  <meta
+    name="twitter:image"
+    content="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80"
+  />
+</Helmet>
       <div className="section-header text-center mb-12">
           <h2 className="text-5xl font-bold text-[#2b2101] animate-fadeInUp">
           Frequently Asked Questions

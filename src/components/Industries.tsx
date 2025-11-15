@@ -1,6 +1,7 @@
 // src/components/Industries.tsx
 import React from 'react';
 import herobanner from '../assets/media/herobanner.png';
+import { Helmet } from 'react-helmet-async';
 
 const Industries: React.FC = () => {
   const industries = [
@@ -16,6 +17,46 @@ const Industries: React.FC = () => {
 
   return (
     <section id="industries" className="py-20 px-[5%] bg-white">
+      <Helmet>
+        <title>Industries We Serve – Corporate, Retail, Healthcare & More | Chandraa Concepts</title>
+
+        <meta
+          name="description"
+          content="Discover the industries we serve with tailored printing solutions—corporate, education, healthcare, hospitality, retail, entertainment, manufacturing, and non-profit sectors."
+        />
+
+        <meta
+          name="keywords"
+          content="printing for industries, corporate printing, retail printing solutions, healthcare printing, hospitality printing, manufacturing printing, printing services Chennai, Chandraa Concepts printing"
+        />
+
+        <link rel="canonical" href="https://www.chandraaconcepts.com/industries" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Industries We Serve | Chandraa Concepts" />
+        <meta
+          property="og:description"
+          content="High-quality printing services for corporate, retail, healthcare, manufacturing, hospitality, non-profit and more industries."
+        />
+        <meta
+          property="og:image"
+          content="https://images.unsplash.com/photo-1581091870627-3a9782f53f3b?auto=format&fit=crop&w=800&q=80"
+        />
+        <meta property="og:url" content="https://www.chandraaconcepts.com/industries" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Industries We Serve – Printing Solutions for Every Sector" />
+        <meta
+          name="twitter:description"
+          content="Explore our printing solutions for corporate, education, retail, healthcare, manufacturing, hospitality, and more."
+        />
+        <meta
+          name="twitter:image"
+          content="https://images.unsplash.com/photo-1581091870627-3a9782f53f3b?auto=format&fit=crop&w=800&q=80"
+        />
+      </Helmet>
       <div className="section-header text-center mb-12">
         <h2 className="section-title text-5xl font-bold text-[#2b2101] opacity-0 animate-fadeInUp">
           Industries We Serve
