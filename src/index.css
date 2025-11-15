@@ -1,0 +1,124 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #95001e;
+  --gold: #ffd700;
+  --dark: #1a1a1a;
+  --light: #f9f9f9;
+  --gray: #555;
+  --transition: all 0.3s ease;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom animations */
+@keyframes sparkle {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  20% { opacity: 1; transform: translateY(-15px) scale(1.2); }
+  40% { opacity: 0.8; transform: translateY(-30px) scale(1); }
+  60% { opacity: 0.6; transform: translateY(-45px) scale(0.8); }
+  100% { opacity: 0; transform: translateY(-60px) scale(0.5); }
+}
+
+/* Custom component classes */
+@layer components {
+  .nav-link {
+    @apply text-light no-underline font-medium relative py-1 transition-all duration-300 hover:text-gold;
+  }
+  
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+  
+  .dropdown-content {
+    @apply hidden absolute min-w-[180px] bg-light shadow-xl rounded overflow-hidden z-10;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    @apply block;
+  }
+  
+  .service-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .material-card {
+    @apply bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .industry-card {
+    @apply bg-white rounded-2xl p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+}
+
+/* Hide mobile menu by default on desktop */
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    @apply fixed top-20 left-[-100%] w-full h-[calc(100vh-80px)] bg-dark flex flex-col items-center pt-10 transition-all duration-300;
+  }
+  
+  .nav-links.active {
+    @apply left-0;
+  }
+}
+
+@keyframes blink-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;          /* visible */
+    border-color: #facc15;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0;          /* fade out */
+  }
+
+  99% {
+    opacity: 0;          /* stay invisible */
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;          /* instantly visible again */
+    transform: scale(1); /* restart from start */
+    border-color: #facc15;
+  }
+}
+
+.animate-blink-ring {
+  animation: blink-ring 1.6s ease-out infinite;
+}
